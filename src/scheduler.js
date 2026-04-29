@@ -12,12 +12,16 @@ function start(bot) {
       const previous = db.getSnapshot();
 
       if (snapshot !== previous) {
-        console.log('Slots changed, notifying subscribers...');
-        await notifyAll(bot, snapshot);
         db.setSnapshot(snapshot);
+        if (previous !== null) {
+          console.log('Slots changed, notifying subscribers...');
+          await notifyAll(bot, snapshot);
+        } else {
+          console.log('Initial snapshot saved, no notification.');
+        }
       }
     } catch (err) {
-      console.error('Scheduler error:', err.message);
+      console.error('Scheduler error:', err.message, err.cause?.message || '');
     }
   };
 

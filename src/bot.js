@@ -28,9 +28,8 @@ bot.onText(/\/start/, async (msg) => {
   const label = username ? `@${username}` : firstName;
   await bot.sendMessage(
     ADMIN_CHAT_ID,
-    `👤 Новый запрос на подписку:\n${label} (${firstName})\nchat\\_id: \`${chatId}\``,
+    `👤 Новый запрос на подписку:\n${label} (${firstName})\nchat_id: ${chatId}`,
     {
-      parse_mode: 'Markdown',
       reply_markup: {
         inline_keyboard: [[
           { text: '✅ Одобрить', callback_data: `approve:${chatId}` },
