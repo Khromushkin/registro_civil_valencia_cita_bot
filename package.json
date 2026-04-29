@@ -1,0 +1,10 @@
+{
+  "name": "registro-civil-bot",
+  "version": "1.0.0",
+  "main": "src/bot.js",
+  "dependencies": {
+    "better-sqlite3": "^9",
+    "dotenv": "^16",
+    "node-telegram-bot-api": "^0.66"
+  }
+}
