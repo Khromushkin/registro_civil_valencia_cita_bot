@@ -5,6 +5,7 @@
   "dependencies": {
     "better-sqlite3": "^9",
     "dotenv": "^16",
+    "node-fetch": "^2",
     "node-telegram-bot-api": "^0.66"
   }
 }

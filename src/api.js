@@ -1,3 +1,4 @@
+const fetch = require('node-fetch');
 const CENTRO = 93;
 const SERVICIO = 395;
 const BASE = 'https://sige.gva.es/qsige.localizador/citaPrevia/disponible';
